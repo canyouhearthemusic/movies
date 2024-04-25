@@ -11,7 +11,7 @@ class OverviewCollectionViewCell: UICollectionViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 20, weight: .medium)
+        label.font = .systemFont(ofSize: 28, weight: .medium)
         label.textColor = .white
         label.text = "Overview"
         

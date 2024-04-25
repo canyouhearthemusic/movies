@@ -40,7 +40,7 @@ class MainPageViewController: UIViewController {
         navigationItem.rightBarButtonItem = searchButton
         navigationItem.rightBarButtonItem?.tintColor = .white
         
-        let logoutButton = UIBarButtonItem(image: UIImage(systemName: "power"), style: .plain, target: self, action: #selector(logoutButtonTapped))
+        let logoutButton = UIBarButtonItem(image: UIImage(systemName: "person.slash"), style: .plain, target: self, action: #selector(logoutButtonTapped))
         navigationItem.rightBarButtonItems = [searchButton, logoutButton]
 
     }

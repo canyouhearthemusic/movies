@@ -5,45 +5,82 @@ import FirebaseAuth
 final class RegistrationViewController: UIViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
+        
         label.text = "Registration"
         label.font = UIFont.boldSystemFont(ofSize: 24)
         label.textAlignment = .center
-        label.textColor = .green
+        label.textColor = .white
+        
         return label
     }()
     
     private let loginTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Username"
+        textField.placeholder = "Email"
         textField.borderStyle = .roundedRect
+        textField.backgroundColor = .white
+
+        textField.textColor = .black
+
+        let placeholderText = NSAttributedString(
+            string: textField.placeholder!,
+            attributes: [.foregroundColor: UIColor.lightGray]
+        )
+        textField.attributedPlaceholder = placeholderText
+
+        textField.layer.borderColor = UIColor.orange.cgColor
+        textField.layer.borderWidth = 2.0
+        textField.layer.cornerRadius = 5.0
+
         return textField
     }()
-    
+
     private let passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Password"
         textField.isSecureTextEntry = true
         textField.borderStyle = .roundedRect
+        textField.backgroundColor = .white
+
+        textField.textColor = .black
+
+        let placeholderText = NSAttributedString(
+            string: textField.placeholder!,
+            attributes: [.foregroundColor: UIColor.lightGray]
+        )
+        textField.attributedPlaceholder = placeholderText
+
+        textField.layer.borderColor = UIColor.orange.cgColor
+        textField.layer.borderWidth = 2.0
+        textField.layer.cornerRadius = 5.0
+
         return textField
     }()
 
     
-    private let continueButton: UIButton = {
+    private let registerButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Continue", for: .normal)
+        
+        button.setTitle("Register", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemCyan
-        button.layer.cornerRadius = 12
+        button.backgroundColor = .orange
+        button.layer.cornerRadius = 8
+
         return button
     }()
+
     
     private lazy var goToLoginScreenButton: UIButton = {
         let button = UIButton()
         button.setTitle("Already have an account? Login", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        button.setTitleColor(.orange, for: .normal)
         button.addTarget(self, action: #selector(goToLoginScreen), for: .touchUpInside)
+
         return button
     }()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,12 +88,12 @@ final class RegistrationViewController: UIViewController {
     }
     
     func setupViews() {
-        view.backgroundColor = .white
+        view.backgroundColor = .black
         
         view.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(50)
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(200)
         }
         
         view.addSubview(loginTextField)
@@ -73,13 +110,13 @@ final class RegistrationViewController: UIViewController {
             make.leading.trailing.height.equalTo(loginTextField)
         }
         
-        view.addSubview(continueButton)
-        continueButton.snp.makeConstraints { make in
+        view.addSubview(registerButton)
+        registerButton.snp.makeConstraints { make in
             make.top.equalTo(passwordTextField.snp.bottom).offset(30)
             make.leading.trailing.equalTo(loginTextField)
             make.height.equalTo(50)
         }
-        continueButton.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
+        registerButton.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
         
         view.addSubview(goToLoginScreenButton)
         goToLoginScreenButton.snp.makeConstraints { make in
