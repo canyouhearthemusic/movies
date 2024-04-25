@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:MoviesApp/GoogleService-Info.plist">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/al1bek/Desktop/projects/swift-projects/MoviesExplore/MoviesApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MoviesApp.xcodeproj">
+   </FileRef>
+</Workspace>

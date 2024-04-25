@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBkEvqHy_zAdNCop-CFW4adx4J4sGXussk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>233301295829</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.lessonone.MovieExplore</string>
+	<key>PROJECT_ID</key>
+	<string>kuka-a1160</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kuka-a1160.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:233301295829:ios:50ff281b5e9d2d55fc585c</string>
+</dict>
+</plist>
